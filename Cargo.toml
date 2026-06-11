@@ -2,7 +2,9 @@
 name = "usefulog"
 version = "0.1.0"
 edition = "2024"
-decription = "A simple logging library"
+description = "A simple logging library"
+homepage = "https://github.com/indium114/usefulog"
+repository = "https://github.com/indium114/usefulog"
 license = "Unlicense"
 
 [dependencies]

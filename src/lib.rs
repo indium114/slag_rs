@@ -10,9 +10,6 @@ use std::fmt;
 fn generic_print(prefix: ColoredString, text: impl fmt::Display) {
     println!("{prefix} {text}")
 }
-fn generic_err(prefix: ColoredString, text: impl fmt::Display) {
-    eprintln!("{prefix} {text}")
-}
 
 // MARK: actual log thingies.
 
@@ -53,7 +50,8 @@ pub fn warn(text: impl fmt::Display) {
 /// // outputs `[err] hello`
 /// ```
 pub fn err(text: impl fmt::Display) {
-    generic_err("[err]".red(), text);
+    let prefix: ColoredString = "[err]".red();
+    eprintln!("{prefix} {text}")
 }
 
 /// prints `text` with the `[sync]` prefix

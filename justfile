@@ -1,5 +1,5 @@
 build:
-    nix build .#scoria
+    nix build .#usefulog
 
 run:
     go run .

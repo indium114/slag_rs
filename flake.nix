@@ -24,8 +24,8 @@
           ];
         };
 
-        packages.scoria = pkgs.rustPlatform.buildRustPackage {
-          name = "scoria";
+        packages.usefulog = pkgs.rustPlatform.buildRustPackage {
+          name = "usefulog";
           version = "0.1.0";
 
           src = ./.;
@@ -33,9 +33,9 @@
           cargoLock.lockFile = ./Cargo.lock;
         };
 
-        apps.scoria = {
+        apps.usefulog = {
           type = "app";
-          program = "${self.packages.${pkgs.stdenv.hostPlatform.system}.scoria}/bin/scoria";
+          program = "${self.packages.${pkgs.stdenv.hostPlatform.system}.usefulog}/bin/usefulog";
         };
       });
 }

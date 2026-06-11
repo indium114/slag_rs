@@ -2,6 +2,8 @@
 name = "scoria"
 version = "0.1.0"
 edition = "2024"
+decription = "A simple logging library"
+license = "Unlicense"
 
 [dependencies]
 colored = "3.1.1"
